@@ -1,0 +1,54 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../Documentos/vicuna/ibex/vendor/lowrisc_ip/ip/prim/rtl" --include "../../../../../../Documentos/vicuna/ibex/vendor/lowrisc_ip/dv/sv/dv_utils" -d "MAIN_CORE_IBEX" \
+"../../../../../../Documentos/vicuna/ibex/syn/rtl/prim_clock_gating.v" \
+
+sv xil_defaultlib  --include "../../../../../../Documentos/vicuna/ibex/vendor/lowrisc_ip/ip/prim/rtl" --include "../../../../../../Documentos/vicuna/ibex/vendor/lowrisc_ip/dv/sv/dv_utils" -d "MAIN_CORE_IBEX" \
+"../../../../../../Documentos/vicuna/rtl/vproc_pkg.sv" \
+"../../../../../../Documentos/vicuna/demo/rtl/demo_top.sv" \
+"../../../../vicuna_demo.srcs/sources_1/new/hwreg_iface.sv" \
+"../../../../../../Documentos/vicuna/ibex/rtl/ibex_pkg.sv" \
+"../../../../../../Documentos/vicuna/ibex/rtl/ibex_alu.sv" \
+"../../../../../../Documentos/vicuna/ibex/rtl/ibex_branch_predict.sv" \
+"../../../../../../Documentos/vicuna/ibex/rtl/ibex_compressed_decoder.sv" \
+"../../../../../../Documentos/vicuna/ibex/rtl/ibex_controller.sv" \
+"../../../../../../Documentos/vicuna/ibex/rtl/ibex_core.sv" \
+"../../../../../../Documentos/vicuna/ibex/rtl/ibex_counter.sv" \
+"../../../../../../Documentos/vicuna/ibex/rtl/ibex_cs_registers.sv" \
+"../../../../../../Documentos/vicuna/ibex/rtl/ibex_csr.sv" \
+"../../../../../../Documentos/vicuna/ibex/rtl/ibex_decoder.sv" \
+"../../../../../../Documentos/vicuna/ibex/rtl/ibex_dummy_instr.sv" \
+"../../../../../../Documentos/vicuna/ibex/rtl/ibex_ex_block.sv" \
+"../../../../../../Documentos/vicuna/ibex/rtl/ibex_fetch_fifo.sv" \
+"../../../../../../Documentos/vicuna/ibex/rtl/ibex_icache.sv" \
+"../../../../../../Documentos/vicuna/ibex/rtl/ibex_id_stage.sv" \
+"../../../../../../Documentos/vicuna/ibex/rtl/ibex_if_stage.sv" \
+"../../../../../../Documentos/vicuna/ibex/rtl/ibex_load_store_unit.sv" \
+"../../../../../../Documentos/vicuna/ibex/rtl/ibex_lockstep.sv" \
+"../../../../../../Documentos/vicuna/ibex/rtl/ibex_multdiv_fast.sv" \
+"../../../../../../Documentos/vicuna/ibex/rtl/ibex_multdiv_slow.sv" \
+"../../../../../../Documentos/vicuna/ibex/rtl/ibex_pmp.sv" \
+"../../../../../../Documentos/vicuna/ibex/rtl/ibex_prefetch_buffer.sv" \
+"../../../../../../Documentos/vicuna/ibex/rtl/ibex_register_file_ff.sv" \
+"../../../../../../Documentos/vicuna/ibex/rtl/ibex_register_file_fpga.sv" \
+"../../../../../../Documentos/vicuna/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_ram_1p_pkg.sv" \
+"../../../../../../Documentos/vicuna/ibex/rtl/ibex_top.sv" \
+"../../../../../../Documentos/vicuna/ibex/rtl/ibex_wb_stage.sv" \
+"../../../../vicuna_demo.srcs/sources_1/new/led.sv" \
+"../../../../../../Documentos/vicuna/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_lfsr.sv" \
+"../../../../../../Documentos/vicuna/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_28_22_dec.sv" \
+"../../../../../../Documentos/vicuna/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_28_22_enc.sv" \
+"../../../../../../Documentos/vicuna/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_39_32_dec.sv" \
+"../../../../../../Documentos/vicuna/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_39_32_enc.sv" \
+"../../../../../../Documentos/vicuna/demo/rtl/ram.sv" \
+"../../../../../../Documentos/vicuna/demo/rtl/uart_rx.sv" \
+"../../../../../../Documentos/vicuna/demo/rtl/uart_tx.sv" \
+"../../../../../../Documentos/vicuna/rtl/vproc_cache.sv" \
+"../../../../../../Documentos/vicuna/rtl/vproc_top.sv" \
+"../../../../../../Documentos/vicuna/rtl/vproc_xif.sv" \
+"../../../../../../Documentos/vicuna/demo/rtl/demo_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

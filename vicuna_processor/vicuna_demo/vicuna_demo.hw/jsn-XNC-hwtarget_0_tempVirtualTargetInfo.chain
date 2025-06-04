@@ -1,0 +1,9 @@
+{
+    "target_type": "svf",
+    "devices": [
+        {
+            "name": "xc7z010"
+        }
+    ],
+    "operations": []
+}

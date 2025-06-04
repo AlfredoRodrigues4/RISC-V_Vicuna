@@ -1,0 +1,126 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Tue May 27 21:08:51 2025
+| Host         : alfredo-HP-Pavilion-Laptop-15-cs3xxx running 64-bit Ubuntu 22.04.5 LTS
+| Command      : report_control_sets -verbose -file demo_top_control_sets_placed.rpt
+| Design       : demo_top
+| Device       : xc7z010
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    48 |
+|    Minimum number of control sets                        |    48 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   109 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    48 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     4 |
+| >= 6 to < 8        |     3 |
+| >= 8 to < 10       |     9 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    30 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              37 |           24 |
+| No           | No                    | Yes                    |              37 |           27 |
+| No           | Yes                   | No                     |              23 |           10 |
+| Yes          | No                    | No                     |             290 |          134 |
+| Yes          | No                    | Yes                    |             590 |          325 |
+| Yes          | Yes                   | No                     |              50 |           14 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------+-------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+| Clock Signal |                                             Enable Signal                                             |                                         Set/Reset Signal                                         | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------+-------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+| ~clk         |                                                                                                       |                                                                                                  |                1 |              1 |         1.00 |
+|  clk         | hwregs/uart/tx_inst/sig_r                                                                             | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |                1 |              1 |         1.00 |
+|  u_core/clk  | vproc/u_core/u_ibex_core/id_stage_i/controller_i/ctrl_fsm_ns                                          | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |                2 |              4 |         2.00 |
+|  clk         | hwregs/uart/rx_inst/data_cnt                                                                          | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |                1 |              4 |         4.00 |
+|  clk         | vproc/u_core/u_ibex_core/if_stage_i/gen_prefetch_buffer.prefetch_buffer_i/fifo_i/E[0]                 | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |                2 |              5 |         2.50 |
+|  clk         | hwregs/uart/rx_inst/sig_q[4]_i_1_n_0                                                                  | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |                1 |              5 |         5.00 |
+|  u_core/clk  | vproc/u_core/u_ibex_core/id_stage_i/controller_i/load_err_q_reg_2[0]                                  | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |                3 |              6 |         2.00 |
+|  u_core/clk  | vproc/u_core/u_ibex_core/if_stage_i/debug_mode_q_reg_4[0]                                             | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |                4 |              6 |         1.50 |
+|  u_core/clk  | vproc/u_core/u_ibex_core/load_store_unit_i/ctrl_update                                                | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |                3 |              6 |         2.00 |
+|  clk         | hwregs/uart/rx_inst/clk_cnt                                                                           | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |                3 |              8 |         2.67 |
+|  u_core/clk  | vproc/u_core/u_ibex_core/if_stage_i/div_en_ex                                                         | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |                3 |              8 |         2.67 |
+|  clk         | hwregs/uart/rx_inst/data_r[7]_i_1__0_n_0                                                              | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |                1 |              8 |         8.00 |
+|  clk         | vproc/u_core/u_ibex_core/if_stage_i/gen_prefetch_buffer.prefetch_buffer_i/fifo_i/data_r               | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |                2 |              8 |         4.00 |
+|  clk         | hwregs/uart/tx_inst/clk_cnt_0                                                                         | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |                3 |              8 |         2.67 |
+|  clk         | hwregs/uart/rx_inst/E[0]                                                                              |                                                                                                  |                2 |              8 |         4.00 |
+|  clk         | hwregs/uart/rx_inst/data_tmp_r_0                                                                      | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |                2 |              8 |         4.00 |
+|  u_core/clk  | vproc/u_core/u_ibex_core/if_stage_i/rdata_q[15]_i_5__0_0[0]                                           | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |                6 |              9 |         1.50 |
+|  clk         |                                                                                                       | vproc/u_core/u_ibex_core/if_stage_i/gen_prefetch_buffer.prefetch_buffer_i/stored_addr_q_reg[4]_0 |                3 |              9 |         3.00 |
+|  clk         | hwregs/uart/rvalid_reg[0]_inv_0                                                                       |                                                                                                  |                2 |             18 |         9.00 |
+|  u_core/clk  | vproc/u_core/u_ibex_core/if_stage_i/rdata_q[5]_i_5_0[0]                                               | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |               11 |             18 |         1.64 |
+|  clk         |                                                                                                       | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |               12 |             20 |         1.67 |
+|  u_core/clk  | vproc/u_core/u_ibex_core/load_store_unit_i/rdata_update                                               | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |                9 |             24 |         2.67 |
+|  u_core/clk  | vproc/u_core/u_ibex_core/if_stage_i/rdata_q[31]_i_7[0]                                                | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |                9 |             24 |         2.67 |
+|  u_core/clk  | vproc/u_core/u_ibex_core/if_stage_i/gen_prefetch_buffer.prefetch_buffer_i/fifo_i/valid_req_q_reg_0[0] |                                                                                                  |                8 |             30 |         3.75 |
+|  u_core/clk  | vproc/u_core/u_ibex_core/if_stage_i/gen_prefetch_buffer.prefetch_buffer_i/fifo_i/valid_req_q_reg_1[0] |                                                                                                  |               17 |             30 |         1.76 |
+|  u_core/clk  |                                                                                                       | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |               22 |             31 |         1.41 |
+|  u_core/clk  | vproc/u_core/u_ibex_core/if_stage_i/rdata_q[15]_i_5__0[0]                                             | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |               19 |             31 |         1.63 |
+|  u_core/clk  | vproc/u_core/u_ibex_core/if_stage_i/debug_mode_q_reg_2[0]                                             | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |               15 |             31 |         2.07 |
+|  u_core/clk  | vproc/u_core/u_ibex_core/id_stage_i/controller_i/E[0]                                                 |                                                                                                  |                8 |             31 |         3.88 |
+|  u_core/clk  | vproc/u_core/u_ibex_core/if_stage_i/rdata_q[1]_i_3__0_0[0]                                            | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |               14 |             32 |         2.29 |
+|  u_core/clk  | vproc/u_core/u_ibex_core/ex_block_i/gen_multdiv_fast.multdiv_i/op_quotient_q                          | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |               19 |             32 |         1.68 |
+|  u_core/clk  | vproc/u_core/u_ibex_core/if_stage_i/rdata_q[15]_i_3_0[0]                                              | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |               16 |             32 |         2.00 |
+|  u_core/clk  | vproc/u_core/u_ibex_core/if_stage_i/mcountinhibit_q_reg[2]_0[1]                                       | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |               18 |             32 |         1.78 |
+|  u_core/clk  | vproc/u_core/u_ibex_core/if_stage_i/mcountinhibit_q_reg[2]_0[0]                                       | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |               17 |             32 |         1.88 |
+|  u_core/clk  | vproc/u_core/u_ibex_core/if_stage_i/mcountinhibit_q_reg[0]_0[1]                                       | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |               17 |             32 |         1.88 |
+|  u_core/clk  | vproc/u_core/u_ibex_core/if_stage_i/mcountinhibit_q_reg[0]_0[0]                                       | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |               18 |             32 |         1.78 |
+|  u_core/clk  | vproc/u_core/u_ibex_core/if_stage_i/imd_val_we_ex[1]                                                  | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |               28 |             32 |         1.14 |
+|  u_core/clk  | vproc/u_core/u_ibex_core/ex_block_i/gen_multdiv_fast.multdiv_i/op_numerator_q                         | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |               16 |             32 |         2.00 |
+|  u_core/clk  | vproc/u_core/u_ibex_core/if_stage_i/debug_mode_q_reg_3[0]                                             | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |               20 |             32 |         1.60 |
+|  u_core/clk  | vproc/u_core/u_ibex_core/if_stage_i/rdata_q[5]_i_6__1_0[0]                                            | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |               16 |             32 |         2.00 |
+|  u_core/clk  | vproc/u_core/u_ibex_core/load_store_unit_i/addr_update                                                | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |                9 |             32 |         3.56 |
+|  u_core/clk  | vproc/u_core/u_ibex_core/if_stage_i/gen_prefetch_buffer.prefetch_buffer_i/fifo_i/entry_en_2           |                                                                                                  |               15 |             33 |         2.20 |
+|  u_core/clk  | vproc/u_core/u_ibex_core/if_stage_i/gen_prefetch_buffer.prefetch_buffer_i/fifo_i/entry_en_0           |                                                                                                  |               19 |             33 |         1.74 |
+|  u_core/clk  | vproc/u_core/u_ibex_core/if_stage_i/gen_prefetch_buffer.prefetch_buffer_i/fifo_i/entry_en_1           |                                                                                                  |               18 |             33 |         1.83 |
+|  u_core/clk  | vproc/u_core/u_ibex_core/if_stage_i/imd_val_we_ex[0]                                                  | vproc/u_core/u_ibex_core/cs_registers_i/mcycle_counter_i/pll_inst                                |               31 |             34 |         1.10 |
+|  clk         |                                                                                                       |                                                                                                  |               23 |             36 |         1.57 |
+|  u_core/clk  | vproc/u_core/u_ibex_core/id_stage_i/controller_i/p_1_in                                               |                                                                                                  |               45 |             83 |         1.84 |
+|  u_core/clk  | vproc/u_core/gen_regfile_fpga.register_file_i/we                                                      |                                                                                                  |               11 |             88 |         8.00 |
++--------------+-------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+
+

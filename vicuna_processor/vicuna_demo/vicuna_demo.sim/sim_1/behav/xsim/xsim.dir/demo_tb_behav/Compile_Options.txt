@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "8" -generic_top "RAM_FPATH=/home/alfredo/Documentos/vicuna/sw/test.vmem" -generic_top "DIFF_CLK=0" -generic_top "SYSCLK_PER=8" -L "xil_defaultlib" -L "uvm" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "demo_tb_behav" "xil_defaultlib.demo_tb" "xil_defaultlib.glbl" -log "elaborate.log" 
