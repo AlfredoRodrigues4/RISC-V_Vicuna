@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "uart.h": "c",
+        "functional": "c",
+        "inttypes.h": "c"
+    }
+}

@@ -1,0 +1,268 @@
+
+;; Function get_num_class (get_num_class, funcdef_no=5, decl_uid=122395, cgraph_uid=6, symbol_order=6)
+
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:11:6: note: vectorized 0 loops in function.
+void get_num_class (int32_t * out)
+{
+  int i;
+
+  <bb 2> [local count: 536870912]:
+  *out_7(D) = 4;
+  return;
+
+}
+
+
+
+;; Function argmax (argmax, funcdef_no=10, decl_uid=122406, cgraph_uid=11, symbol_order=11)
+
+
+Analyzing loop at /home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:  === analyze_loop_nest ===
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   === vect_analyze_loop_form ===
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   using as main loop exit: 3 -> 11 [AUX: (nil)]
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:    === get_loop_niters ===
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:    Loop has 1 exits.
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:    Analyzing exit 0...
+Analyzing # of iterations of loop 1
+  exit condition [2, + , 1](no_overflow) < size_12(D)
+  bounds on difference of bases: 0 ... 2147483645
+  result:
+    # of iterations (unsigned int) size_12(D) + 4294967294, bounded by 2147483645
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:    All loop exits successfully analyzed.
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   Symbolic number of iterations is (unsigned int) size_12(D) + 4294967295
+Creating dr for *_3
+analyze_innermost: success.
+	base_address: x_15(D)
+	offset from base address: 0
+	constant offset from base address: 2
+	step: 2
+	base alignment: 2
+	base misalignment: 0
+	offset alignment: 128
+	step alignment: 2
+	base_object: *x_15(D)
+	Access function 0: {2B, +, 2}_1
+Creating dr for *_7
+analyze_innermost: /home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5369:21: missed:  failed: evolution of base is not affine.
+	base_address: 
+	offset from base address: 
+	constant offset from base address: 
+	step: 
+	base alignment: 0
+	base misalignment: 0
+	offset alignment: 0
+	step alignment: 0
+	base_object: *_7
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   === vect_analyze_data_refs ===
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   got vectype for stmt: _4 = *_3;
+vector([2,2]) short int
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   got vectype for stmt: _8 = *_7;
+vector([2,2]) short int
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   === vect_analyze_scalar_cycles ===
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   Analyze phi: max_index_20 = PHI <max_index_9(8), 0(18)>
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   Access function of PHI: max_index_20
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   Analyze phi: i_22 = PHI <i_17(8), 1(18)>
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   Access function of PHI: {1, +, 1}_1
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   step: 1,  init: 1
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   Detected induction.
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   Analyze phi: max_index_20 = PHI <max_index_9(8), 0(18)>
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: missed:   reduction used in loop.
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: missed:   Unknown def-use cycle pattern.
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   === vect_determine_precisions ===
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   using boolean precision 16 for _10 = _4 > _8;
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   i_17 has range [0x80000001, 0x7fffffff]
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   max_index_9 has no range info
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   max_index_16 has no range info
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   _8 has no range info
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   _6 has range [0x0, 0xfffffffe]
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   _5 has no range info
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   _4 has no range info
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   _2 has range [0x0, 0xfffffffe]
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   i.1_1 has no range info
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   === vect_pattern_recog ===
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   vect_is_simple_use: operand (unsigned int) i_22, type of def: internal
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   vect_is_simple_use: operand i_22 = PHI <i_17(8), 1(18)>, type of def: induction
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   vect_is_simple_use: operand (unsigned int) max_index_20, type of def: internal
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   vect_is_simple_use: operand max_index_20 = PHI <max_index_9(8), 0(18)>, type of def: unknown
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: missed:   Unsupported pattern.
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   gather/scatter pattern: detected: _8 = *_7;
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   gather_scatter pattern recognized: patt_18 = .MASK_LEN_GATHER_LOAD ((sizetype) x_15(D), max_index_20, 2, 0, -1);
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   vect_is_simple_use: operand i_22 = PHI <i_17(8), 1(18)>, type of def: induction
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   vect_is_simple_use: operand i_22 = PHI <i_17(8), 1(18)>, type of def: induction
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   === vect_analyze_data_ref_accesses ===
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   === vect_mark_stmts_to_be_vectorized ===
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   init: phi relevant? max_index_20 = PHI <max_index_9(8), 0(18)>
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   init: phi relevant? i_22 = PHI <i_17(8), 1(18)>
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   init: stmt relevant? i.1_1 = (unsigned int) i_22;
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   init: stmt relevant? _2 = i.1_1 * 2;
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   init: stmt relevant? _3 = x_15(D) + _2;
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   init: stmt relevant? _4 = *_3;
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   init: stmt relevant? _5 = (unsigned int) max_index_20;
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   init: stmt relevant? _6 = _5 * 2;
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   init: stmt relevant? _7 = x_15(D) + _6;
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   init: stmt relevant? _8 = *_7;
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   init: stmt relevant? max_index_16 = (int16_t) i_22;
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   init: stmt relevant? _10 = _4 > _8;
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   init: stmt relevant? max_index_9 = _10 ? max_index_16 : max_index_20;
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   vec_stmt_relevant_p: used out of loop.
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   vect_is_simple_use: operand _4 > _8, type of def: internal
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   vec_stmt_relevant_p: stmt live but not relevant.
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   mark relevant 1, live 1: max_index_9 = _10 ? max_index_16 : max_index_20;
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   init: stmt relevant? i_17 = i_22 + 1;
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   init: stmt relevant? if (size_12(D) > i_17)
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   worklist: examine stmt: max_index_9 = _10 ? max_index_16 : max_index_20;
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   vect_is_simple_use: operand _4 > _8, type of def: internal
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   mark relevant 1, live 0: _10 = _4 > _8;
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   vect_is_simple_use: operand (int16_t) i_22, type of def: internal
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   mark relevant 1, live 0: max_index_16 = (int16_t) i_22;
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   vect_is_simple_use: operand max_index_20 = PHI <max_index_9(8), 0(18)>, type of def: unknown
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: missed:   Unsupported pattern.
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5366:5: missed:   not vectorized: unsupported use in stmt.
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: missed:  unexpected pattern.
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:  ***** Analysis  failed with vector mode RVVM1HI
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:  ***** The result for vector mode RVVM1QI would be the same
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: missed: couldn't vectorize loop
+Creating dr for *_3
+analyze_innermost: success.
+	base_address: x_15(D) + (sizetype) i_22 * 2
+	offset from base address: 0
+	constant offset from base address: 0
+	step: 0
+	base alignment: 2
+	base misalignment: 0
+	offset alignment: 128
+	step alignment: 128
+	base_object: *_3
+Creating dr for *_7
+analyze_innermost: success.
+	base_address: x_15(D) + (sizetype) max_index_20 * 2
+	offset from base address: 0
+	constant offset from base address: 0
+	step: 0
+	base alignment: 2
+	base misalignment: 0
+	offset alignment: 128
+	step alignment: 128
+	base_object: *_7
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:  === vect_slp_analyze_bb ===
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   === vect_analyze_data_refs ===
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   got vectype for stmt: _4 = *_3;
+vector([2,2]) short int
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   got vectype for stmt: _8 = *_7;
+vector([2,2]) short int
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note:   === vect_analyze_data_ref_accesses ===
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: missed:   not consecutive access _8 = *_7;
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: missed:   not consecutive access _4 = *_3;
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: missed:  not vectorized: no grouped stores in basic block.
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note: ***** Analysis failed with vector mode RVVM1HI
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5368:23: note: ***** Skipping vector mode RVVM1QI, which would repeat the analysis for RVVM1HI
+/home/alfredo/Documentos/vicuna/sw//lib/header_editado.c:5366:5: note: vectorized 0 loops in function.
+Removing basic block 3
+;; basic block 3, loop depth 1
+;;  pred:       8
+;;              18
+# max_index_20 = PHI <max_index_9(8), 0(18)>
+# i_22 = PHI <i_17(8), 1(18)>
+i.1_1 = (unsigned int) i_22;
+_2 = i.1_1 * 2;
+_3 = x_15(D) + _2;
+_4 = *_3;
+_5 = (unsigned int) max_index_20;
+_6 = _5 * 2;
+_7 = x_15(D) + _6;
+_8 = *_7;
+max_index_16 = (int16_t) i_22;
+_10 = _4 > _8;
+max_index_9 = _10 ? max_index_16 : max_index_20;
+i_17 = i_22 + 1;
+if (size_12(D) > i_17)
+  goto <bb 8>; [89.00%]
+else
+  goto <bb 11>; [11.00%]
+;;  succ:       8
+;;              11
+
+
+Removing basic block 8
+;; basic block 8, loop depth 1
+;;  pred:      
+;;  succ:      
+
+
+Removing basic block 18
+;; basic block 18, loop depth 0
+;;  pred:      
+;;  succ:      
+
+
+Merging blocks 17 and 19
+fix_loop_structure: fixing up loops for function
+fix_loop_structure: removing loop 1
+int argmax (int16_t * x, int size)
+{
+  int i;
+  int16_t max_index;
+  int _13;
+  _Bool _19;
+  unsigned int i.1_25;
+  unsigned int _26;
+  int16_t * _27;
+  short int _28;
+  unsigned int _29;
+  unsigned int _30;
+  int16_t * _31;
+  short int _32;
+
+  <bb 2> [local count: 118111600]:
+  if (size_12(D) > 1)
+    goto <bb 17>; [89.00%]
+  else
+    goto <bb 6>; [11.00%]
+
+  <bb 17> [local count: 105119324]:
+  _19 = 0;
+  goto <bb 12>; [100.00%]
+
+  <bb 11> [local count: 105119324]:
+  # max_index_11 = PHI <max_index_34(15)>
+  goto <bb 6>; [100.00%]
+
+  <bb 12> [local count: 955630224]:
+  # max_index_23 = PHI <0(17), max_index_34(16)>
+  # i_24 = PHI <1(17), i_35(16)>
+  i.1_25 = (unsigned int) i_24;
+  _26 = i.1_25 * 2;
+  _27 = x_15(D) + _26;
+  _28 = *_27;
+  _29 = (unsigned int) max_index_23;
+  _30 = _29 * 2;
+  _31 = x_15(D) + _30;
+  _32 = *_31;
+  if (_28 > _32)
+    goto <bb 14>; [50.00%]
+  else
+    goto <bb 15>; [50.00%]
+
+  <bb 14> [local count: 477815112]:
+  max_index_33 = (int16_t) i_24;
+
+  <bb 15> [local count: 955630224]:
+  # max_index_34 = PHI <max_index_23(12), max_index_33(14)>
+  i_35 = i_24 + 1;
+  if (size_12(D) > i_35)
+    goto <bb 16>; [89.00%]
+  else
+    goto <bb 11>; [11.00%]
+
+  <bb 16> [local count: 850510900]:
+  goto <bb 12>; [100.00%]
+
+  <bb 6> [local count: 118111600]:
+  # max_index_21 = PHI <max_index_11(11), 0(2)>
+  _13 = (int) max_index_21;
+  return _13;
+
+}
+
+
