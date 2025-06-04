@@ -1,6 +1,6 @@
-## ![RISC-V Logo](https://upload.wikimedia.org/wikipedia/commons/6/6a/RISC-V_logo.svg) Simple RISC-V Vicuna Project
+<h2><img src="https://github.com/user-attachments/assets/50073f99-6315-4d8c-90b1-45e6901c7061" alt="RISC-V Logo" width="30" style="vertical-align: middle;"> RISC-V Vicuna Project</h2>
 
-This repository includes the **Vicuna** project, which I am using to deploy **TinyML** models. I chose to instantiate Vicuna from the ground up due to the significant changes it underwent, making it important to work with a dedicated and controlled version.
+This repository includes the **Vicuna** project, which I'm using to implement **TinyML** models. I chose to create a separate repository due to the significant changes it has undergone, making it important to work with a dedicated and controlled version.
 
 The main goal is to perform efficient inference of TinyML models, leveraging the **vector extension** of Vicuna to accelerate the entire process.
 
