@@ -1,4 +1,4 @@
-<h2>About the <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/RISC-V_logo.svg" alt="RISC-V Logo" width="40" style="vertical-align:middle;"> <strong>Simple RISC-V Vicuna</strong> Project</h2>
+## ![RISC-V Logo](https://upload.wikimedia.org/wikipedia/commons/6/6a/RISC-V_logo.svg) Simple RISC-V Vicuna Project
 
 This repository includes the **Vicuna** project, which I am using to deploy **TinyML** models. I chose to instantiate Vicuna from the ground up due to the significant changes it underwent, making it important to work with a dedicated and controlled version.
 
@@ -17,7 +17,3 @@ Vicuna was originally developed by:
 > 33rd Euromicro Conference on Real-Time Systems (ECRTS 2021), LIPIcs, Volume 196, Pages 1:1–1:18  
 > [DOI: 10.4230/LIPIcs.ECRTS.2021.1](https://doi.org/10.4230/LIPIcs.ECRTS.2021.1)  
 > [Link to full paper](https://drops.dagstuhl.de/opus/volltexte/2021/13932)
-
----
-
-Let me know if you’d like to add a build guide, usage examples, or FPGA setup instructions!
